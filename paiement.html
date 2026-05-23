@@ -3,16 +3,14 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Paiement officiel sécurisé - Madagascar Télétravail</title>
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Paiement sécurisé | Madagascar Télétravail</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,21 +19,27 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
-  
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 
 font-family:'Poppins',sans-serif;
 
 background:
-linear-gradient(135deg,#02101f,#071f3f,#0b2b52,#03111f);
+linear-gradient(135deg,#020817,#071426,#0b1f38,#08111f);
 
 background-size:400% 400%;
 
 animation:bgmove 15s ease infinite;
 
-color:white;
+color:#fff;
 
 overflow-x:hidden;
+
+min-height:100vh;
 
 }
 
@@ -55,83 +59,53 @@ background-position:0% 50%;
 
 }
 
-.glow1{
+.glow1,
+.glow2{
 
 position:fixed;
 
-width:350px;
-height:350px;
+width:420px;
+height:420px;
 
-background:#00bfff;
+border-radius:50%;
 
-filter:blur(140px);
+filter:blur(130px);
 
-opacity:0.18;
+opacity:0.20;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.glow1{
+
+background:#00cfff;
 
 top:-120px;
 left:-120px;
-
-animation:float1 8s infinite alternate;
-
-pointer-events:none;
 
 }
 
 .glow2{
 
-position:fixed;
-
-width:350px;
-height:350px;
-
 background:#7b2cff;
 
-filter:blur(140px);
-
-opacity:0.15;
-
-bottom:-120px;
+bottom:-150px;
 right:-120px;
-
-animation:float2 8s infinite alternate;
-
-pointer-events:none;
-
-}
-
-@keyframes float1{
-
-from{
-transform:translateY(0px);
-}
-
-to{
-transform:translateY(80px);
-}
-
-}
-
-@keyframes float2{
-
-from{
-transform:translateY(0px);
-}
-
-to{
-transform:translateY(-80px);
-}
 
 }
 
 .container{
 
-width:92%;
+width:95%;
 
-max-width:1050px;
+max-width:1450px;
 
 margin:auto;
 
-padding:35px 0 70px;
+padding:35px 0 80px;
 
 position:relative;
 
@@ -143,56 +117,37 @@ z-index:2;
 
 text-align:center;
 
-margin-bottom:25px;
-
-animation:fadeup 1s ease;
+margin-bottom:30px;
 
 }
 
 .logo img{
 
-width:320px;
+width:330px;
 
 max-width:92%;
 
 filter:
-drop-shadow(0 0 18px rgba(0,191,255,0.45));
+drop-shadow(0 0 25px rgba(0,191,255,0.35));
 
 }
 
-@keyframes fadeup{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-.form-box{
+.main-box{
 
 background:
-rgba(7,20,42,0.78);
+rgba(5,16,34,0.84);
 
 backdrop-filter:blur(18px);
 
 border:
 1px solid rgba(255,255,255,0.08);
 
-border-radius:35px;
+border-radius:38px;
 
 padding:45px;
 
 box-shadow:
-0 0 40px rgba(0,191,255,0.12),
-0 0 80px rgba(0,0,0,0.35);
-
-animation:fadeup 1.2s ease;
+0 0 45px rgba(0,0,0,0.40);
 
 }
 
@@ -200,17 +155,16 @@ h1{
 
 text-align:center;
 
-font-size:48px;
+font-size:52px;
 
-font-weight:700;
+font-weight:800;
 
-margin-bottom:14px;
+margin-bottom:18px;
 
-color:#7de8ff;
+color:#7cecff;
 
 text-shadow:
-0 0 10px rgba(0,191,255,0.8),
-0 0 30px rgba(0,191,255,0.35);
+0 0 25px rgba(0,213,255,0.45);
 
 }
 
@@ -218,43 +172,94 @@ text-shadow:
 
 text-align:center;
 
-line-height:1.9;
+font-size:18px;
 
-color:#dcecff;
+line-height:2;
+
+color:#dbeeff;
+
+max-width:1100px;
+
+margin:auto auto 25px;
+
+}
+
+.site-link{
+
+text-align:center;
 
 margin-bottom:45px;
 
-font-size:17px;
+}
+
+.site-link a{
+
+display:inline-block;
+
+padding:15px 28px;
+
+border-radius:18px;
+
+background:
+rgba(0,191,255,0.10);
+
+border:
+1px solid rgba(0,191,255,0.20);
+
+color:#00e5ff;
+
+font-weight:700;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+.site-link a:hover{
+
+transform:translateY(-2px);
+
+background:
+rgba(0,191,255,0.18);
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
 
 }
 
 .section{
 
 background:
-rgba(4,16,35,0.75);
+rgba(3,14,28,0.88);
 
 border:
-1px solid rgba(255,255,255,0.06);
+1px solid rgba(255,255,255,0.05);
 
-border-radius:28px;
+border-radius:30px;
 
-padding:32px;
-
-box-shadow:
-0 0 20px rgba(0,191,255,0.08);
+padding:35px;
 
 }
 
-.section h2{
+.section-title{
 
-margin-bottom:24px;
+font-size:30px;
 
-font-size:28px;
+font-weight:700;
 
-color:#7ce4ff;
+margin-bottom:28px;
 
-text-shadow:
-0 0 10px rgba(0,191,255,0.45);
+color:#7cecff;
 
 }
 
@@ -262,26 +267,24 @@ label{
 
 display:block;
 
-margin-top:20px;
-
+margin-top:18px;
 margin-bottom:10px;
+
+font-size:15px;
 
 font-weight:600;
 
-color:#e8f2ff;
+color:#fff;
 
 }
 
 .optional{
 
-color:#00f0ff;
-
 font-size:13px;
 
-margin-left:6px;
+color:#00dbff;
 
-text-shadow:
-0 0 10px rgba(0,240,255,0.8);
+margin-left:6px;
 
 }
 
@@ -290,25 +293,23 @@ textarea{
 
 width:100%;
 
-padding:18px;
-
-border:none;
-
-outline:none;
+padding:18px 20px;
 
 border-radius:18px;
 
-background:
-rgba(9,28,58,0.95);
+border:
+1px solid rgba(255,255,255,0.08);
 
-color:white;
+background:
+rgba(8,25,50,0.95);
+
+color:#fff;
 
 font-size:16px;
 
-transition:0.3s;
+outline:none;
 
-border:
-1px solid rgba(255,255,255,0.06);
+transition:0.3s;
 
 }
 
@@ -316,18 +317,16 @@ input:focus,
 textarea:focus{
 
 border:
-1px solid #00d5ff;
+1px solid #00d9ff;
 
 box-shadow:
-0 0 18px rgba(0,213,255,0.28);
-
-transform:scale(1.01);
+0 0 20px rgba(0,213,255,0.18);
 
 }
 
 textarea{
 
-min-height:120px;
+min-height:140px;
 
 resize:vertical;
 
@@ -335,21 +334,23 @@ resize:vertical;
 
 .note{
 
-margin-top:24px;
+margin-top:28px;
 
-padding:20px;
+padding:24px;
 
-border-radius:18px;
+border-radius:22px;
 
 background:
-rgba(7,25,52,0.85);
+rgba(7,22,43,0.92);
+
+border:
+1px solid rgba(0,191,255,0.10);
 
 line-height:1.9;
 
 color:#dcecff;
 
-border:
-1px solid rgba(0,191,255,0.12);
+font-size:15px;
 
 }
 
@@ -357,78 +358,252 @@ border:
 
 display:none;
 
-margin-top:35px;
+}
+
+.receipt{
+
+background:
+rgba(6,18,36,0.95);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+border-radius:35px;
+
+padding:40px;
+
+box-shadow:
+0 0 30px rgba(0,0,0,0.35);
+
+}
+
+.receipt-top{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+padding-bottom:25px;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+
+margin-bottom:30px;
+
+}
+
+.receipt-company{
+
+flex:1;
+
+min-width:280px;
+
+}
+
+.receipt-company h2{
+
+font-size:36px;
+
+margin-bottom:12px;
+
+color:#7cecff;
+
+}
+
+.receipt-company p{
+
+line-height:2;
+
+font-size:15px;
+
+color:#dbeeff;
+
+}
+
+.receipt-badge{
+
+background:
+linear-gradient(135deg,#00c3ff,#007bff);
+
+padding:18px 24px;
+
+border-radius:22px;
+
+font-size:14px;
+
+font-weight:700;
+
+line-height:1.8;
+
+min-width:260px;
+
+box-shadow:
+0 0 20px rgba(0,191,255,0.25);
+
+}
+
+.receipt-title{
+
+text-align:center;
+
+font-size:40px;
+
+font-weight:800;
+
+margin-bottom:35px;
+
+color:#ffffff;
+
+letter-spacing:2px;
+
+}
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+}
+
+.info-box{
+
+padding:20px;
+
+border-radius:20px;
+
+background:
+rgba(8,27,53,0.90);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+}
+
+.info-box strong{
+
+display:block;
+
+font-size:14px;
+
+margin-bottom:10px;
+
+color:#8fe9ff;
+
+}
+
+.info-box span{
+
+font-size:16px;
+
+line-height:1.7;
+
+word-break:break-word;
+
+}
+
+.total-box{
+
+margin-top:30px;
 
 padding:30px;
 
-border-radius:26px;
+border-radius:28px;
 
 background:
-rgba(4,16,35,0.92);
+linear-gradient(135deg,#021b31,#0b3d6f);
+
+text-align:center;
 
 border:
 1px solid rgba(0,255,255,0.12);
 
-box-shadow:
-0 0 20px rgba(0,191,255,0.10);
+}
 
-animation:fadeup 0.5s ease;
+.total-box h3{
+
+font-size:20px;
+
+margin-bottom:15px;
+
+font-weight:600;
+
+color:#dff8ff;
 
 }
 
-.summary h3{
+.total-price{
 
-text-align:center;
+font-size:52px;
 
-margin-bottom:25px;
-
-font-size:28px;
-
-color:#7de8ff;
-
-}
-
-.line{
-
-padding:14px 0;
-
-border-bottom:
-1px solid rgba(255,255,255,0.06);
-
-line-height:1.8;
-
-}
-
-.total{
-
-margin-top:25px;
-
-text-align:center;
-
-font-size:38px;
-
-font-weight:bold;
+font-weight:800;
 
 color:#00f0ff;
 
 text-shadow:
-0 0 18px rgba(0,240,255,0.8);
+0 0 25px rgba(0,255,255,0.55);
+
+}
+
+.legal{
+
+margin-top:30px;
+
+padding:30px;
+
+border-radius:24px;
+
+background:
+rgba(5,18,35,0.90);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+line-height:2;
+
+font-size:15px;
+
+color:#dbeeff;
+
+}
+
+.legal h4{
+
+font-size:22px;
+
+margin-bottom:18px;
+
+color:#7cecff;
+
+}
+
+.buttons{
+
+margin-top:30px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:18px;
 
 }
 
 .btn{
 
-width:100%;
+border:none;
 
 padding:20px;
 
-margin-top:24px;
+border-radius:22px;
 
-border:none;
-
-border-radius:20px;
-
-font-size:19px;
+font-size:17px;
 
 font-weight:700;
 
@@ -436,43 +611,44 @@ cursor:pointer;
 
 transition:0.3s;
 
-color:white;
+color:#fff;
+
+font-family:'Poppins',sans-serif;
 
 }
 
 .btn:hover{
 
-transform:translateY(-2px) scale(1.01);
+transform:translateY(-2px);
 
 }
 
-.orange{
+.btn-blue{
 
 background:
-linear-gradient(135deg,#ff9800,#ffb300);
-
-box-shadow:
-0 0 22px rgba(255,152,0,0.35);
+linear-gradient(135deg,#009dff,#00d4ff);
 
 }
 
-.purple{
+.btn-purple{
 
 background:
-linear-gradient(135deg,#7b2cff,#b23ad6);
-
-box-shadow:
-0 0 22px rgba(178,58,214,0.35);
+linear-gradient(135deg,#6a00ff,#9b2fff);
 
 }
 
-.green{
+.btn-green{
 
 background:
-linear-gradient(135deg,#00c853,#00ff84);
+linear-gradient(135deg,#00b84d,#00ff80);
 
-box-shadow:
-0 0 22px rgba(0,255,132,0.35);
+}
+
+.btn a{
+
+text-decoration:none;
+
+color:white;
 
 }
 
@@ -480,11 +656,11 @@ box-shadow:
 
 position:fixed;
 
-bottom:18px;
-right:18px;
+bottom:20px;
+right:20px;
 
-width:72px;
-height:72px;
+width:78px;
+height:78px;
 
 border-radius:50%;
 
@@ -496,9 +672,9 @@ justify-content:center;
 
 font-size:36px;
 
-text-decoration:none;
+color:#fff;
 
-color:white;
+text-decoration:none;
 
 box-shadow:
 0 0 25px rgba(0,0,0,0.35);
@@ -507,15 +683,39 @@ z-index:999;
 
 }
 
+@media(max-width:1100px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 @media(max-width:768px){
 
-.form-box{
+.container{
+
+width:94%;
+
+}
+
+.main-box{
+
+padding:22px;
+
+border-radius:28px;
+
+}
+
+.section{
 
 padding:22px;
 
 }
 
-.section{
+.receipt{
 
 padding:22px;
 
@@ -531,40 +731,43 @@ font-size:34px;
 
 font-size:15px;
 
-}
-
-.section h2{
-
-font-size:24px;
+line-height:1.8;
 
 }
 
-input,
-textarea{
+.receipt-title{
 
-padding:15px;
-
-font-size:15px;
+font-size:28px;
 
 }
 
-.total{
+.receipt-company h2{
 
-font-size:30px;
+font-size:28px;
 
 }
 
-.btn{
+.info-grid{
 
-font-size:17px;
+grid-template-columns:1fr;
 
-padding:17px;
+}
+
+.total-price{
+
+font-size:38px;
+
+}
+
+.buttons{
+
+grid-template-columns:1fr;
 
 }
 
 .logo img{
 
-width:240px;
+width:230px;
 
 }
 
@@ -577,18 +780,17 @@ width:240px;
 <body>
 
 <div class="glow1"></div>
-
 <div class="glow2"></div>
 
 <div class="container">
 
 <div class="logo">
 
-<img src="logomt.png">
+<img src="logomt.png" alt="Madagascar Télétravail">
 
 </div>
 
-<div class="form-box">
+<div class="main-box">
 
 <h1>
 Paiement officiel sécurisé
@@ -596,9 +798,17 @@ Paiement officiel sécurisé
 
 <div class="subtitle">
 
-Madagascar Télétravail vous offre cette solution 
-de paiement sécurisé pour vos prestations professionnelles, commandes, paiements divers,
-recrutements,services offshore et /ou autres.
+Madagascar Télétravail met à votre disposition cette plateforme sécurisée
+pour vos paiements professionnels, prestations offshore,
+services BPO, formations, recrutements et prestations digitales.
+
+</div>
+
+<div class="site-link">
+
+<a href="https://bpo.madagascarteletravail.com" target="_blank">
+bpo.madagascarteletravail.com
+</a>
 
 </div>
 
@@ -608,22 +818,26 @@ action="https://formsubmit.co/madagascarteletravail@gmail.com"
 method="POST"
 enctype="multipart/form-data">
 
-<input type="hidden" name="_subject" value="Nouveau résumé de paiement">
-
+<input type="hidden" name="_subject" value="Nouveau paiement reçu">
 <input type="hidden" name="_captcha" value="false">
-
 <input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://bpo.madagascarteletravail.com/merci.html">
 
-<input type="hidden" name="_next" value="merci.html">
+<input type="hidden" name="Référence reçu" id="hiddenRef">
+<input type="hidden" name="Date paiement" id="hiddenDate">
+<input type="hidden" name="Frais transaction (€)" id="hiddenFrais">
+<input type="hidden" name="Montant total (€)" id="hiddenTotal">
+
+<div class="grid">
 
 <div class="section">
 
-<h2>
-Informations de paiement
-</h2>
+<div class="section-title">
+Informations du payeur
+</div>
 
 <label>
-Motif de ce paiement
+Motif du paiement
 </label>
 
 <input
@@ -633,7 +847,7 @@ name="Motif du paiement"
 required>
 
 <label>
-Votre nom / raison sociale
+Nom / Société
 </label>
 
 <input
@@ -653,7 +867,7 @@ name="Email"
 required>
 
 <label>
-Numéro facture / bon de commande
+Numéro facture / commande
 <span class="optional">
 (Facultatif)
 </span>
@@ -665,9 +879,19 @@ id="facture"
 name="Numero facture">
 
 <label>
+Montant facture (€)
+</label>
+
+<input
+type="number"
+id="montant"
+name="Montant facture (€)"
+required>
+
+<label>
 Pièce jointe
 <span class="optional">
-(Facultatif / vous pouvez laisser vide)
+(Facultatif)
 </span>
 </label>
 
@@ -686,71 +910,158 @@ Informations complémentaires
 id="details"
 name="Informations complémentaires"></textarea>
 
-<label>
-Montant facture (€)
-</label>
-
-<input
-type="number"
-id="montant"
-required>
-
 <div class="note">
 
- Après votre paiement,
-merci de transmettre votre référence de transaction
-ou notification ou justificatif de paiement.
+Après votre paiement,
+merci de transmettre votre référence de transaction,
+capture ou justificatif de paiement.
 
 </div>
 
-<div
-id="summary"
-class="summary">
+</div>
 
-<h3>
-Résumé du paiement
-</h3>
+<div class="summary" id="summary">
 
-<div class="line">
-Date et heure :
+<div class="receipt">
+
+<div class="receipt-top">
+
+<div class="receipt-company">
+
+<h2>
+MADAGASCAR TÉLÉTRAVAIL
+</h2>
+
+<p>
+
+Plateforme professionnelle de paiement sécurisé
+
+<br><br>
+
+📍 110 A Bypass Antananarivo Madagascar
+
+<br>
+
+📞 +261 34 66 974 78
+
+<br>
+
+🌐 bpo.madagascarteletravail.com
+
+</p>
+
+</div>
+
+<div class="receipt-badge">
+
+NIF : 2003151055
+
+<br>
+
+STAT : 63122112018005725
+
+<br>
+
+RCS : 2018 A 01422
+
+</div>
+
+</div>
+
+<div class="receipt-title">
+REÇU DE PAIEMENT
+</div>
+
+<div class="info-grid">
+
+<div class="info-box">
+<strong>Date</strong>
 <span id="sDate"></span>
 </div>
 
-<div class="line">
-Référence reçu :
+<div class="info-box">
+<strong>Référence</strong>
 <span id="sRef"></span>
 </div>
 
-<div class="line">
-Motif :
+<div class="info-box">
+<strong>Motif</strong>
 <span id="sMotif"></span>
 </div>
 
-<div class="line">
-Nom / société :
+<div class="info-box">
+<strong>Nom / Société</strong>
 <span id="sNom"></span>
 </div>
 
-<div class="line">
-Montant facture :
+<div class="info-box">
+<strong>Email payeur</strong>
+<span id="sEmail"></span>
+</div>
+
+<div class="info-box">
+<strong>Numéro facture</strong>
+<span id="sFacture"></span>
+</div>
+
+<div class="info-box">
+<strong>Montant facture</strong>
 <span id="sMontant"></span> €
 </div>
 
-<div class="line">
-Frais de transaction :
+<div class="info-box">
+<strong>Frais transaction</strong>
 <span id="sFrais"></span> €
 </div>
 
-<div class="total">
-Total :
+</div>
+
+<div class="total-box">
+
+<h3>
+TOTAL À PAYER
+</h3>
+
+<div class="total-price">
 <span id="sTotal"></span> €
 </div>
 
 </div>
 
+<div class="legal">
+
+<h4>
+Mentions légales
+</h4>
+
+NIF : 2003151055
+
+<br>
+
+STAT : 63122112018005725
+
+<br>
+
+RCS : 2018 A 01422
+
+<br><br>
+
+Bien conserver ceci pour vos pièces comptables
+et justificatifs de paiement.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
 <button
 type="button"
-class="btn orange"
+class="btn btn-blue"
 onclick="showSummary()">
 
 Afficher le résumé
@@ -759,26 +1070,21 @@ Afficher le résumé
 
 <button
 type="submit"
-class="btn purple"
+class="btn btn-purple"
 onclick="prepareForm()">
 
 Envoyer et télécharger le reçu
 
 </button>
 
-<a
-href="https://buy.stripe.com/14A4gA3Oe5DecbG7NUawo01?locale=fr&__embed_source=buy_btn_1TUcFtLwve9FxvvUEygftFXq"
-target="_blank">
-
 <button
 type="button"
-class="btn green">
+class="btn btn-green"
+onclick="window.open('https://buy.stripe.com/14A4gA3Oe5DecbG7NUawo01?locale=fr&__embed_source=buy_btn_1TUcFtLwve9FxvvUEygftFXq')">
 
 Payer par carte bancaire
 
 </button>
-
-</a>
 
 </div>
 
@@ -793,7 +1099,7 @@ class="whatsapp"
 href="https://wa.me/261346697478"
 target="_blank">
 
-
+☎
 
 </a>
 
@@ -806,8 +1112,9 @@ function generateReference(){
 
 let now=new Date();
 
-return "MT-"+now.getFullYear()
-+"-"+Math.floor(Math.random()*999999);
+return "MT-"+
+now.getFullYear()+"-"+
+Math.floor(Math.random()*999999);
 
 }
 
@@ -825,13 +1132,13 @@ frais=montant*0.03;
 
 }
 
-else if(montant>=751 && montant<=1500){
+else if(montant<=1500){
 
 frais=25;
 
 }
 
-else if(montant>=1501 && montant<=3000){
+else if(montant<=3000){
 
 frais=35;
 
@@ -877,6 +1184,12 @@ document.getElementById("motif").value;
 document.getElementById("sNom").innerHTML=
 document.getElementById("nom").value;
 
+document.getElementById("sEmail").innerHTML=
+document.getElementById("email").value;
+
+document.getElementById("sFacture").innerHTML=
+document.getElementById("facture").value || "-";
+
 document.getElementById("sMontant").innerHTML=
 calc.montant.toFixed(2);
 
@@ -886,9 +1199,32 @@ calc.frais.toFixed(2);
 document.getElementById("sTotal").innerHTML=
 calc.total.toFixed(2);
 
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
 }
 
 function prepareForm(){
+
+if(currentReference===""){
+
+showSummary();
+
+}
+
+let calc=calculate();
+
+document.getElementById("hiddenRef").value=currentReference;
+
+document.getElementById("hiddenDate").value=currentDate;
+
+document.getElementById("hiddenFrais").value=
+calc.frais.toFixed(2)+" €";
+
+document.getElementById("hiddenTotal").value=
+calc.total.toFixed(2)+" €";
 
 downloadReceipt();
 
@@ -901,31 +1237,32 @@ let calc=calculate();
 let contenu=
 
 "====================================================\n"+
-"               MADAGASCAR TÉLÉTRAVAIL\n"+
+"             MADAGASCAR TÉLÉTRAVAIL\n"+
 "====================================================\n\n"+
 
-"services@madagascarteletravail.com\n"+
-"110 A BYPASS TANA 103\n"+
-"Antananarivo, Madagascar\n"+
-"+261 34 66 974 78\n\n"+
+"REÇU DE PAIEMENT\n\n"+
 
 "NIF : 2003151055\n"+
 "STAT : 63122112018005725\n"+
 "RCS : 2018 A 01422\n\n"+
 
-"====================================================\n"+
-"          RÉSUMÉ DE PAIEMENT (À EFFECTUER)\n"+
 "====================================================\n\n"+
 
-"Référence reçu : "+currentReference+"\n\n"+
+"Date : "+currentDate+"\n\n"+
 
-"Date et heure : "+currentDate+"\n\n"+
+"Référence : "+currentReference+"\n\n"+
 
 "Motif : "+
 document.getElementById("motif").value+"\n\n"+
 
 "Nom / Société : "+
 document.getElementById("nom").value+"\n\n"+
+
+"Email payeur : "+
+document.getElementById("email").value+"\n\n"+
+
+"Numéro facture : "+
+(document.getElementById("facture").value || "-")+"\n\n"+
 
 "Montant facture : "+
 calc.montant.toFixed(2)+" €\n\n"+
@@ -936,8 +1273,13 @@ calc.frais.toFixed(2)+" €\n\n"+
 "TOTAL À PAYER : "+
 calc.total.toFixed(2)+" €\n\n"+
 
-"====================================================\n"+
-"Merci pour votre confiance.\n"+
+"====================================================\n\n"+
+
+"Bien conserver ceci pour vos pièces comptables\n"+
+"et justificatifs de paiement.\n\n"+
+
+"Merci pour votre confiance.\n\n"+
+
 "====================================================";
 
 let blob=new Blob(
