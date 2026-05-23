@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Paiement officiel sécurisé - Madagascar Télétravail</title>
-
+<title>Paiement officiel sÃ©curisÃ© - Madagascar TÃ©lÃ©travail</title>
+  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -591,13 +591,13 @@ width:240px;
 <div class="form-box">
 
 <h1>
-Paiement officiel sécurisé
+Paiement officiel sÃ©curisÃ©
 </h1>
 
 <div class="subtitle">
 
-Madagascar Télétravail vous offre cette solution 
-de paiement sécurisé pour vos prestations professionnelles, commandes, paiements divers,
+Madagascar TÃ©lÃ©travail vous offre cette solution 
+de paiement sÃ©curisÃ© pour vos prestations professionnelles, commandes, paiements divers,
 recrutements,services offshore et /ou autres.
 
 </div>
@@ -608,7 +608,7 @@ action="https://formsubmit.co/madagascarteletravail@gmail.com"
 method="POST"
 enctype="multipart/form-data">
 
-<input type="hidden" name="_subject" value="Nouveau résumé de paiement">
+<input type="hidden" name="_subject" value="Nouveau rÃ©sumÃ© de paiement">
 
 <input type="hidden" name="_captcha" value="false">
 
@@ -639,7 +639,7 @@ Votre nom / raison sociale
 <input
 type="text"
 id="nom"
-name="Nom ou société"
+name="Nom ou sociÃ©tÃ©"
 required>
 
 <label>
@@ -653,7 +653,7 @@ name="Email"
 required>
 
 <label>
-Numéro facture / bon de commande
+NumÃ©ro facture / bon de commande
 <span class="optional">
 (Facultatif)
 </span>
@@ -665,7 +665,7 @@ id="facture"
 name="Numero facture">
 
 <label>
-Pièce jointe
+PiÃ¨ce jointe
 <span class="optional">
 (Facultatif / vous pouvez laisser vide)
 </span>
@@ -676,7 +676,7 @@ type="file"
 name="Piece jointe">
 
 <label>
-Informations complémentaires
+Informations complÃ©mentaires
 <span class="optional">
 (Facultatif)
 </span>
@@ -684,10 +684,10 @@ Informations complémentaires
 
 <textarea
 id="details"
-name="Informations complémentaires"></textarea>
+name="Informations complÃ©mentaires"></textarea>
 
 <label>
-Montant facture (€)
+Montant facture (â‚¬)
 </label>
 
 <input
@@ -697,8 +697,8 @@ required>
 
 <div class="note">
 
- Après votre paiement,
-merci de transmettre votre référence de transaction
+ AprÃ¨s votre paiement,
+merci de transmettre votre rÃ©fÃ©rence de transaction
 ou notification ou justificatif de paiement.
 
 </div>
@@ -708,7 +708,7 @@ id="summary"
 class="summary">
 
 <h3>
-Résumé du paiement
+RÃ©sumÃ© du paiement
 </h3>
 
 <div class="line">
@@ -717,7 +717,7 @@ Date et heure :
 </div>
 
 <div class="line">
-Référence reçu :
+RÃ©fÃ©rence reÃ§u :
 <span id="sRef"></span>
 </div>
 
@@ -727,23 +727,23 @@ Motif :
 </div>
 
 <div class="line">
-Nom / société :
+Nom / sociÃ©tÃ© :
 <span id="sNom"></span>
 </div>
 
 <div class="line">
 Montant facture :
-<span id="sMontant"></span> €
+<span id="sMontant"></span> â‚¬
 </div>
 
 <div class="line">
 Frais de transaction :
-<span id="sFrais"></span> €
+<span id="sFrais"></span> â‚¬
 </div>
 
 <div class="total">
 Total :
-<span id="sTotal"></span> €
+<span id="sTotal"></span> â‚¬
 </div>
 
 </div>
@@ -753,7 +753,7 @@ type="button"
 class="btn orange"
 onclick="showSummary()">
 
-Afficher le résumé
+Afficher le rÃ©sumÃ©
 
 </button>
 
@@ -762,7 +762,7 @@ type="submit"
 class="btn purple"
 onclick="prepareForm()">
 
-Envoyer et télécharger le reçu
+Envoyer et tÃ©lÃ©charger le reÃ§u
 
 </button>
 
@@ -862,7 +862,7 @@ currentReference=generateReference();
 let now=new Date();
 
 currentDate=
-now.toLocaleDateString("fr-FR")+" à "+
+now.toLocaleDateString("fr-FR")+" Ã  "+
 now.toLocaleTimeString("fr-FR");
 
 document.getElementById("summary").style.display="block";
@@ -901,7 +901,7 @@ let calc=calculate();
 let contenu=
 
 "====================================================\n"+
-"               MADAGASCAR TÉLÉTRAVAIL\n"+
+"               MADAGASCAR TÃ‰LÃ‰TRAVAIL\n"+
 "====================================================\n\n"+
 
 "services@madagascarteletravail.com\n"+
@@ -914,27 +914,27 @@ let contenu=
 "RCS : 2018 A 01422\n\n"+
 
 "====================================================\n"+
-"          RÉSUMÉ DE PAIEMENT (À EFFECTUER)\n"+
+"          RÃ‰SUMÃ‰ DE PAIEMENT (Ã€ EFFECTUER)\n"+
 "====================================================\n\n"+
 
-"Référence reçu : "+currentReference+"\n\n"+
+"RÃ©fÃ©rence reÃ§u : "+currentReference+"\n\n"+
 
 "Date et heure : "+currentDate+"\n\n"+
 
 "Motif : "+
 document.getElementById("motif").value+"\n\n"+
 
-"Nom / Société : "+
+"Nom / SociÃ©tÃ© : "+
 document.getElementById("nom").value+"\n\n"+
 
 "Montant facture : "+
-calc.montant.toFixed(2)+" €\n\n"+
+calc.montant.toFixed(2)+" â‚¬\n\n"+
 
 "Frais transaction : "+
-calc.frais.toFixed(2)+" €\n\n"+
+calc.frais.toFixed(2)+" â‚¬\n\n"+
 
-"TOTAL À PAYER : "+
-calc.total.toFixed(2)+" €\n\n"+
+"TOTAL Ã€ PAYER : "+
+calc.total.toFixed(2)+" â‚¬\n\n"+
 
 "====================================================\n"+
 "Merci pour votre confiance.\n"+
