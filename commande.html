@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commande Services - Madagascar Télétravail</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#06152e;
+    color:white;
+}
+
+.container{
+    width:95%;
+    max-width:900px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo img{
+    width:280px;
+    max-width:90%;
+}
+
+h1{
+    text-align:center;
+    margin-top:20px;
+    color:#ffffff;
+}
+
+.form-box{
+    background:#0d2347;
+    padding:30px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+textarea{
+    min-height:120px;
+}
+
+.price-box{
+    background:#09162e;
+    padding:20px;
+    border-radius:15px;
+    margin-top:25px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.total{
+    font-size:28px;
+    color:#00e5ff;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:18px;
+    background:#0066ff;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#1a75ff;
+}
+
+.note{
+    margin-top:15px;
+    color:#9db8e3;
+    font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="logomt.png">
+</div>
+
+<h1>Commander un service</h1>
+
+<div class="form-box">
+
+<form action="https://formsubmit.co/myteamsmadagascar@gmail.com" method="POST">
+
+<label>Nom prénom </label>
+<input type="text" name="Nom" required>
+
+<label>Nom de l'Entreprise</label>
+<input type="text" name="Société" >
+
+<label>Adresse de facturation</label>
+<input type="text" name="" >
+
+<label>Email</label>
+<input type="email" name="Email" required>
+
+<label>Téléphone</label>
+<input type="text" name="Téléphone">
+
+<label>Service souhaité</label>
+
+<select id="service" name="Service" onchange="updatePrice()">
+
+<option value="">Choisir un service</option>
+
+<option value="Bases prospects BTOB 5000 contacts" data-price="200">
+Bases prospects BTOB 5000 contacts - 200€
+</option>
+
+<option value="Bases prospects BTOC 5000 contacts" data-price="200">
+Bases prospects BTOC 5000 contacts - 200€
+</option>
+
+<option value="Mobile 5000 contacts" data-price="250">
+Mobile 5000 contacts - 250€
+</option>
+
+<option value="Service client 10h/semaine" data-price="135">
+Service client 10h/semaine - 135€
+</option>
+
+<option value="Service client 15h/semaine" data-price="225">
+Service client 15h/semaine - 225€
+</option>
+
+<option value="Télésecrétariat 10h/semaine" data-price="150">
+Télésecrétariat 10h/semaine - 150€
+</option>
+
+<option value="Télésecrétariat 15h/semaine" data-price="250">
+Télésecrétariat 15h/semaine - 250€
+</option>
+
+<option value="Activation leads/projets" data-price="100">
+Activation leads/projets - 100€
+</option>
+
+<option value="Pack 5 leads/projets" data-price="150">
+Pack 5 leads/projets - 150€
+</option>
+
+<option value="Pack 10 leads/projets" data-price="280">
+Pack 10 leads/projets - 280€
+</option>
+
+<option value="Pack 5 RDV BTOB" data-price="150">
+Pack 5 RDV BTOB - 150€
+</option>
+
+<option value="Pack 10 RDV BTOB" data-price="250">
+Pack 10 RDV BTOB - 250€
+</option>
+
+<option value="Pack 20 RDV BTOB" data-price="440">
+Pack 20 RDV BTOB - 440€
+</option>
+
+<option value="Pack 5 RDV BTOC" data-price="220">
+Pack 5 RDV BTOC - 220€
+</option>
+
+<option value="Pack 10 RDV BTOC" data-price="400">
+Pack 10 RDV BTOC - 400€
+</option>
+
+<option value="Pack 20 RDV BTOC" data-price="750">
+Pack 20 RDV BTOC - 750€
+</option>
+
+<option value="Autre service personnalisé" data-price="0">
+Autre service personnalisé
+</option>
+
+</select>
+
+<label>Montant (€)</label>
+<input type="number" id="amount" name="Montant" placeholder="Montant en euros">
+
+<label>Description / besoin</label>
+<textarea name="Description"></textarea>
+
+<div class="price-box">
+
+<div>Montant estimé :</div>
+
+<div class="total">
+<span id="displayTotal">0</span> €
+</div>
+
+<div class="note">
+Vous pouvez modifier librement le montant pour un service personnalisé.
+</div>
+
+</div>
+
+<input type="hidden" name="_next" value="merci.html">
+
+<button type="submit">
+Envoyer la commande
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+function updatePrice(){
+
+let service=document.getElementById("service");
+
+let selected=service.options[service.selectedIndex];
+
+let price=selected.getAttribute("data-price");
+
+document.getElementById("amount").value=price;
+
+document.getElementById("displayTotal").innerHTML=price;
+
+}
+
+document.getElementById("amount").addEventListener("input",function(){
+
+document.getElementById("displayTotal").innerHTML=this.value;
+
+});
+
+</script>
+
+</body>
+</html>

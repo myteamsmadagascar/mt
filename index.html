@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Madagascar Télétravail</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#020817;
+color:white;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+header{
+background:#041226;
+padding:18px 5%;
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:70px;
+}
+
+.logo-text{
+font-size:28px;
+font-weight:800;
+line-height:1.1;
+color:#ff9d00;
+}
+
+.logo-text span{
+display:block;
+font-size:12px;
+font-weight:400;
+color:#d9d9d9;
+}
+
+.menu{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#ff9d00;
+}
+
+.hero{
+padding:80px 5%;
+text-align:center;
+background:linear-gradient(135deg,#041226,#01050c);
+}
+
+.hero h1{
+font-size:58px;
+font-weight:800;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero h1 span{
+color:#ff9d00;
+}
+
+.hero p{
+max-width:950px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#d4d4d4;
+}
+
+.services-section{
+padding:70px 5%;
+}
+
+.section-title{
+font-size:42px;
+font-weight:800;
+text-align:center;
+margin-bottom:15px;
+}
+
+.section-subtitle{
+text-align:center;
+font-size:18px;
+color:#c8c8c8;
+margin-bottom:60px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
+}
+
+.service-card{
+background:#07172f;
+border-radius:25px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 40px rgba(0,0,0,0.35);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-7px);
+}
+
+.service-content{
+padding:28px;
+}
+
+.service-content h2{
+font-size:30px;
+margin-bottom:18px;
+font-weight:700;
+}
+
+.service-content p{
+line-height:1.9;
+margin-bottom:20px;
+color:#d9d9d9;
+}
+
+.service-content ul{
+list-style:none;
+margin-bottom:25px;
+}
+
+.service-content ul li{
+margin-bottom:12px;
+line-height:1.7;
+}
+
+.tarif-box{
+background:#0f2243;
+padding:20px;
+border-radius:18px;
+border-left:5px solid #ff9d00;
+margin-bottom:25px;
+}
+
+.tarif-box h3{
+margin-bottom:12px;
+font-size:20px;
+color:#ffb300;
+}
+
+.tarif-box p{
+margin:0;
+line-height:1.9;
+}
+
+.service-btn{
+display:inline-block;
+padding:15px 28px;
+border-radius:14px;
+font-weight:700;
+font-size:15px;
+transition:0.3s;
+}
+
+.blue-btn{
+background:#2563eb;
+color:white;
+}
+
+.orange-btn{
+background:#ea580c;
+color:white;
+}
+
+.green-btn{
+background:#16a34a;
+color:white;
+}
+
+.red-btn{
+background:#dc2626;
+color:white;
+}
+
+.purple-btn{
+background:#7c3aed;
+color:white;
+}
+
+.gold-btn{
+background:#f59e0b;
+color:black;
+}
+
+.service-btn:hover{
+transform:scale(1.03);
+opacity:0.92;
+}
+
+footer{
+background:#010814;
+padding:50px 5%;
+margin-top:70px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.footer-box h3{
+color:#ff9d00;
+margin-bottom:15px;
+}
+
+.footer-box p{
+line-height:1.9;
+color:#d0d0d0;
+}
+
+.copy{
+margin-top:35px;
+text-align:center;
+color:#9f9f9f;
+font-size:14px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.menu{
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="logomt.png">
+
+<div class="logo-text">
+MADAGASCAR TÉLÉTRAVAIL
+<span>L'EXTERNALISATION SUR MESURE</span>
+</div>
+
+</div>
+
+<div class="menu">
+
+<a href="#">Accueil</a>
+<a href="#">Services</a>
+<a href="formation.html">Formation</a>
+<a href="recrutement.html">Recrutement</a>
+<a href="commande.html">Commander</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+Développez votre activité avec
+<span>Madagascar Télétravail</span>
+
+</h1>
+
+<p>
+
+Externalisation offshore,
+service client,
+téléprospection,
+community management,
+recrutement,
+formations
+et création digitale professionnelle.
+
+</p>
+
+</section>
+
+<section class="services-section">
+
+<div class="section-title">
+NOS SERVICES PROFESSIONNELS
+</div>
+
+<div class="section-subtitle">
+Externalisation • Téléprospection • Formation • Recrutement • Création digitale
+</div>
+
+<div class="services-grid">
+
+<!-- BASE -->
+
+<div class="service-card">
+
+<img src="base.png">
+
+<div class="service-content">
+
+<h2>Achat de bases de données</h2>
+
+<p>
+
+Bases BtoB et BtoC qualifiées,
+fixes et mobiles,
+France,
+Outre-mer
+et autres pays.
+
+</p>
+
+<ul>
+
+<li> Achat à l’unité ou par pack</li>
+<li> Données récentes et exploitables</li>
+<li> Fichiers normés et sécurisés</li>
+<li> Ciblage précis par activité</li>
+<li> Livraison rapide</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• Bases fixes & mobiles
+<br>
+• France & International
+<br>
+• Sur devis selon volume
+
+</p>
+
+</div>
+
+<a href="commande.html" class="service-btn blue-btn">
+
+Commander maintenant
+
+</a>
+
+</div>
+
+</div>
+
+<!-- TELEPROSPECTION -->
+
+<div class="service-card">
+
+<img src="teleprospection.png">
+
+<div class="service-content">
+
+<h2>Téléprospection offshore</h2>
+
+<p>
+
+Boostez vos commerciaux
+avec une équipe dédiée
+à la prise de rendez-vous
+et qualification prospects.
+forfait mensuel 
+base de données,CRM, téléphonie inclus 
+suivis en temps réel 
+
+</p>
+
+<ul>
+
+<li> Prise de RDV commerciaux</li>
+<li> Détection de projets</li>
+<li> Qualification prospects</li>
+<li> Reporting détaillé</li>
+<li> CRM & suivi en temps réel</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• France : 500€/mois
+<br>
+• Outre-mer : 600€/mois
+<br>
+• Suisse / Canada : 800€/mois
+
+</p>
+
+</div>
+
+<a href="commande.html" class="service-btn orange-btn">
+
+Commander une campagne
+
+</a>
+
+</div>
+
+</div>
+
+<!-- PROSPECTION -->
+
+<div class="service-card">
+
+<img src="prospection.png">
+
+<div class="service-content">
+
+<h2>Prospection commerciale</h2>
+
+<p>
+
+Prospection ciblée
+heure de bureau 
+pour immobilier, formation, isolation, énergie, assurance , services,
+prestataires,
+services,
+profils
+et autres secteurs.
+
+</p>
+
+<ul>
+
+<li> Maison & terrain</li>
+<li> Prestataires de services</li>
+<li> Profils & candidats</li>
+<li> Qualification prospects</li>
+<li> RDV commerciaux</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• Achat de RDV possible
+<br>
+• Sur devis selon campagne
+<br>
+• BtoB & BtoC
+
+</p>
+
+</div>
+
+<a href="commande.html" class="service-btn orange-btn">
+
+Lancer une prospection
+
+</a>
+
+</div>
+
+</div>
+
+<!-- RECRUTEMENT -->
+
+<div class="service-card">
+
+<img src="recrutement.png">
+
+<div class="service-content">
+
+<h2>Recrutement professionnel</h2>
+
+<p>
+
+Confiez-nous
+vos recrutements locaux
+ou internationaux
+pour trouver rapidement
+les bons profils.
+
+</p>
+
+<ul>
+
+<li> Recherche de profils</li>
+<li> Préqualification & tests</li>
+<li> Télétravail ou entreprise</li>
+<li> Garantie remplacement</li>
+<li> Accompagnement recrutement</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• Malagasy : 1 mois salaire
+<br>
+• France / International : 40%
+
+</p>
+
+</div>
+
+<a href="recrutement.html" class="service-btn blue-btn">
+
+Confier un recrutement
+
+</a>
+
+</div>
+
+</div>
+
+<!-- FORMATION -->
+
+<div class="service-card">
+
+<img src="formation.png">
+
+<div class="service-content">
+
+<h2>Formation télétravail</h2>
+
+<p>
+
+Développez vos compétences
+dans les métiers du télétravail,
+vente,
+marketing
+et offshore.
+
+</p>
+
+<ul>
+
+<li> Téléprospection</li>
+<li> Télécommercial</li>
+<li> CRM & outils</li>
+<li> Marketing digital</li>
+<li> Formation personnalisée</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• À partir de 50€
+<br>
+• Créneaux jour & soir
+<br>
+• Réduction groupe
+
+</p>
+
+</div>
+
+<a href="formation.html" class="service-btn gold-btn">
+
+Réserver une formation
+
+</a>
+
+</div>
+
+</div>
+
+<!-- COMMUNITY -->
+
+<div class="service-card">
+
+<img src="community.png">
+
+<div class="service-content">
+
+<h2>Community Management</h2>
+
+<p>
+
+Développez votre visibilité
+avec une gestion professionnelle
+de vos réseaux sociaux.
+
+</p>
+
+<ul>
+
+<li> Publications engageantes</li>
+<li> Facebook & Instagram</li>
+<li> Réponses commentaires</li>
+<li> Programmation contenu</li>
+<li> Développement audience</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• À partir de 250€/mois
+<br>
+• Gestion mensuelle
+<br>
+• Sur devis selon besoin
+
+</p>
+
+</div>
+
+<a href="contact.html" class="service-btn green-btn">
+
+Demander un devis
+
+</a>
+
+</div>
+
+</div>
+
+<!-- COMMUNITY MANAGER -->
+
+<div class="service-card">
+
+<img src="communitymanager.png">
+
+<div class="service-content">
+
+<h2>Agent  polyvalent /multitâche</h2>
+
+<p>
+
+Un agent dédié
+pour développer votre image,
+votre audience
+et votre relation client.
+
+</p>
+
+<ul>
+
+<li> Gestion quotidienne de vos tâches</li>
+<li> Réponses Messenger,appels et mail</li>
+<li> Gestion Marketplace</li>
+<li> Création contenus</li>
+<li> Reporting & suivi</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires mensuelles du lundi au vendredi</h3>
+
+<p>
+
+• 2h/j : 250€
+<br>
+• 5h/j : 350€
+<br>
+• 7h/j : 450€
+<br>
+• 8h/j : 500€
+
+</p>
+
+</div>
+
+<a href="contact.html" class="service-btn green-btn">
+
+Position staffée
+
+</a>
+
+</div>
+
+</div>
+
+<!-- SERVICE CLIENT -->
+
+<div class="service-card">
+
+<img src="serviceclient.png">
+
+<div class="service-content">
+
+<h2>Service client offshore</h2>
+
+<p>
+
+Externalisez votre relation client
+avec des agents professionnels
+et réactifs.
+
+</p>
+
+<ul>
+
+<li> Gestion appels & emails</li>
+<li> Réclamations clients</li>
+<li> Suivi commandes</li>
+<li> Reporting qualité</li>
+<li> Satisfaction client</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• 5h/j : 350€
+<br>
+• 7h/j : 450€
+<br>
+• 8h/j : 500€
+<br>
+• 24/7 : 1000€
+
+</p>
+
+</div>
+
+<a href="contact.html" class="service-btn red-btn">
+
+Externaliser maintenant
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ASSISTANAT -->
+
+<div class="service-card">
+
+<img src="assistanat.png">
+
+<div class="service-content">
+
+<h2>Assistants virtuels</h2>
+
+<p>
+
+Déléguez vos tâches administratives
+et concentrez-vous
+sur votre développement.
+
+</p>
+
+<ul>
+
+<li> Gestion emails</li>
+<li> Agenda & organisation</li>
+<li> Documents & reporting</li>
+<li> Assistance administrative</li>
+<li> Support professionnel</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• 4h/j : 300€
+<br>
+• 7h/j : 500€
+<br>
+• 8h/j : 600€
+
+</p>
+
+</div>
+
+<a href="contact.html" class="service-btn purple-btn">
+
+Demander un assistant
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CREATION SITE -->
+
+<div class="service-card">
+
+<img src="creationsite.png">
+
+<div class="service-content">
+
+<h2>Création de site internet</h2>
+
+<p>
+
+Création de site vitrine
+professionnel,
+responsive,
+moderne
+et performant.
+
+</p>
+
+<ul>
+
+<li> Design moderne</li>
+<li> SEO optimisé</li>
+<li> WhatsApp flottant</li>
+<li> Hébergement inclus</li>
+<li> Support technique</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions tarifaires</h3>
+
+<p>
+
+• Création : 260€
+<br>
+• Renouvellement : 50€/an
+<br>
+• Email pro : 15€/an
+
+</p>
+
+</div>
+
+<a href="contact.html" class="service-btn purple-btn">
+
+Créer mon site
+
+</a>
+
+</div>
+
+</div>
+
+<!-- PAIEMENT -->
+
+<div class="service-card">
+
+<img src="paiement.png">
+
+<div class="service-content">
+
+<h2>Paiement sécurisé</h2>
+
+<p>
+
+Payez vos prestations
+par carte bancaire
+via une plateforme
+100% sécurisée.
+
+</p>
+
+<ul>
+
+<li> Paiement sécurisé SSL</li>
+<li> Confirmation immédiate</li>
+<li> Reçu automatique</li>
+<li> Visa & Mastercard</li>
+<li> Plateforme fiable</li>
+
+</ul>
+
+<div class="tarif-box">
+
+<h3>Conditions</h3>
+
+<p>
+
+• Sans frais cachés
+<br>
+• Confirmation automatique
+<br>
+• Paiement sécurisé
+
+</p>
+
+</div>
+
+<a href="paiement.html" class="service-btn blue-btn">
+
+Payer maintenant
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div class="footer-box">
+
+<h3>Madagascar Télétravail</h3>
+
+<p>
+
+Votre partenaire
+pour une externalisation
+professionnelle
+et performante.
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>
+
+services@madagascarteletravail.com
+<br>
+direction@madagascarteletravail.com
+<br>
++261 34 66 97 478
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Site web</h3>
+
+<p>
+
+www.madagascarteletravail.com
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+© 2026 Madagascar Télétravail - Tous droits réservés
+
+</div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Madagascar Télétravail</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#07142c;
+    color:white;
+}
+
+.container{
+    width:92%;
+    max-width:750px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo img{
+    width:280px;
+    max-width:90%;
+}
+
+.form-box{
+    background:#10284f;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:15px;
+    color:#4db8ff;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cfe0ff;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+textarea{
+    min-height:160px;
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#0f62fe;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d7dff;
+}
+
+.footer{
+    text-align:center;
+    margin-top:35px;
+    color:#aac4ef;
+    line-height:1.8;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="logomt.png" alt="Madagascar Télétravail">
+</div>
+
+<div class="form-box">
+
+<h1>Contactez-nous</h1>
+
+<div class="subtitle">
+Demande de devis, demande d’information ou autre besoin professionnel.
+</div>
+
+<form action="https://formsubmit.co/madagascarteletravail@gmail.com" method="POST">
+
+<input type="hidden" name="_next" value="merci.html">
+
+<input type="hidden" name="_subject" value="Nouveau message depuis le site Madagascar Télétravail">
+
+<label>Objet</label>
+
+<select name="Objet" required>
+<option value="">Choisir un objet</option>
+<option>Demande de devis</option>
+<option>Demande d'information</option>
+<option>Autre</option>
+</select>
+
+<label>Nom ou raison sociale</label>
+<input type="text" name="Nom ou société" required>
+
+<label>Adresse email</label>
+<input type="email" name="Email" required>
+
+<label>Votre message</label>
+<textarea name="Message" required></textarea>
+
+<button type="submit">
+Envoyer mon message
+</button>
+
+</form>
+
+</div>
+
+<div class="footer">
+
+<p>
+Madagascar Télétravail<br>
+L’externalisation sur mesure
+</p>
+
+<p>
+direction@madagascarteletravail.com<br>
+services@madagascarteletravail.com
+</p>
+
+<p>
+www.madagascarteletravail.com
+</p>
+
+</div>
+
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/261346697478"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paiement officiel sécurisé - Madagascar Télétravail</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(135deg,#02101f,#071f3f,#0b2b52,#03111f);
+
+background-size:400% 400%;
+
+animation:bgmove 15s ease infinite;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+@keyframes bgmove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.glow1{
+
+position:fixed;
+
+width:350px;
+height:350px;
+
+background:#00bfff;
+
+filter:blur(140px);
+
+opacity:0.18;
+
+top:-120px;
+left:-120px;
+
+animation:float1 8s infinite alternate;
+
+pointer-events:none;
+
+}
+
+.glow2{
+
+position:fixed;
+
+width:350px;
+height:350px;
+
+background:#7b2cff;
+
+filter:blur(140px);
+
+opacity:0.15;
+
+bottom:-120px;
+right:-120px;
+
+animation:float2 8s infinite alternate;
+
+pointer-events:none;
+
+}
+
+@keyframes float1{
+
+from{
+transform:translateY(0px);
+}
+
+to{
+transform:translateY(80px);
+}
+
+}
+
+@keyframes float2{
+
+from{
+transform:translateY(0px);
+}
+
+to{
+transform:translateY(-80px);
+}
+
+}
+
+.container{
+
+width:92%;
+
+max-width:1050px;
+
+margin:auto;
+
+padding:35px 0 70px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.logo{
+
+text-align:center;
+
+margin-bottom:25px;
+
+animation:fadeup 1s ease;
+
+}
+
+.logo img{
+
+width:320px;
+
+max-width:92%;
+
+filter:
+drop-shadow(0 0 18px rgba(0,191,255,0.45));
+
+}
+
+@keyframes fadeup{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.form-box{
+
+background:
+rgba(7,20,42,0.78);
+
+backdrop-filter:blur(18px);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+border-radius:35px;
+
+padding:45px;
+
+box-shadow:
+0 0 40px rgba(0,191,255,0.12),
+0 0 80px rgba(0,0,0,0.35);
+
+animation:fadeup 1.2s ease;
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:48px;
+
+font-weight:700;
+
+margin-bottom:14px;
+
+color:#7de8ff;
+
+text-shadow:
+0 0 10px rgba(0,191,255,0.8),
+0 0 30px rgba(0,191,255,0.35);
+
+}
+
+.subtitle{
+
+text-align:center;
+
+line-height:1.9;
+
+color:#dcecff;
+
+margin-bottom:45px;
+
+font-size:17px;
+
+}
+
+.section{
+
+background:
+rgba(4,16,35,0.75);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+border-radius:28px;
+
+padding:32px;
+
+box-shadow:
+0 0 20px rgba(0,191,255,0.08);
+
+}
+
+.section h2{
+
+margin-bottom:24px;
+
+font-size:28px;
+
+color:#7ce4ff;
+
+text-shadow:
+0 0 10px rgba(0,191,255,0.45);
+
+}
+
+label{
+
+display:block;
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+color:#e8f2ff;
+
+}
+
+.optional{
+
+color:#00f0ff;
+
+font-size:13px;
+
+margin-left:6px;
+
+text-shadow:
+0 0 10px rgba(0,240,255,0.8);
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+border-radius:18px;
+
+background:
+rgba(9,28,58,0.95);
+
+color:white;
+
+font-size:16px;
+
+transition:0.3s;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+}
+
+input:focus,
+textarea:focus{
+
+border:
+1px solid #00d5ff;
+
+box-shadow:
+0 0 18px rgba(0,213,255,0.28);
+
+transform:scale(1.01);
+
+}
+
+textarea{
+
+min-height:120px;
+
+resize:vertical;
+
+}
+
+.note{
+
+margin-top:24px;
+
+padding:20px;
+
+border-radius:18px;
+
+background:
+rgba(7,25,52,0.85);
+
+line-height:1.9;
+
+color:#dcecff;
+
+border:
+1px solid rgba(0,191,255,0.12);
+
+}
+
+.summary{
+
+display:none;
+
+margin-top:35px;
+
+padding:30px;
+
+border-radius:26px;
+
+background:
+rgba(4,16,35,0.92);
+
+border:
+1px solid rgba(0,255,255,0.12);
+
+box-shadow:
+0 0 20px rgba(0,191,255,0.10);
+
+animation:fadeup 0.5s ease;
+
+}
+
+.summary h3{
+
+text-align:center;
+
+margin-bottom:25px;
+
+font-size:28px;
+
+color:#7de8ff;
+
+}
+
+.line{
+
+padding:14px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,0.06);
+
+line-height:1.8;
+
+}
+
+.total{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:bold;
+
+color:#00f0ff;
+
+text-shadow:
+0 0 18px rgba(0,240,255,0.8);
+
+}
+
+.btn{
+
+width:100%;
+
+padding:20px;
+
+margin-top:24px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:19px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:0.3s;
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px) scale(1.01);
+
+}
+
+.orange{
+
+background:
+linear-gradient(135deg,#ff9800,#ffb300);
+
+box-shadow:
+0 0 22px rgba(255,152,0,0.35);
+
+}
+
+.purple{
+
+background:
+linear-gradient(135deg,#7b2cff,#b23ad6);
+
+box-shadow:
+0 0 22px rgba(178,58,214,0.35);
+
+}
+
+.green{
+
+background:
+linear-gradient(135deg,#00c853,#00ff84);
+
+box-shadow:
+0 0 22px rgba(0,255,132,0.35);
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:18px;
+right:18px;
+
+width:72px;
+height:72px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:36px;
+
+text-decoration:none;
+
+color:white;
+
+box-shadow:
+0 0 25px rgba(0,0,0,0.35);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.form-box{
+
+padding:22px;
+
+}
+
+.section{
+
+padding:22px;
+
+}
+
+h1{
+
+font-size:34px;
+
+}
+
+.subtitle{
+
+font-size:15px;
+
+}
+
+.section h2{
+
+font-size:24px;
+
+}
+
+input,
+textarea{
+
+padding:15px;
+
+font-size:15px;
+
+}
+
+.total{
+
+font-size:30px;
+
+}
+
+.btn{
+
+font-size:17px;
+
+padding:17px;
+
+}
+
+.logo img{
+
+width:240px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="glow1"></div>
+
+<div class="glow2"></div>
+
+<div class="container">
+
+<div class="logo">
+
+<img src="logomt.png">
+
+</div>
+
+<div class="form-box">
+
+<h1>
+Paiement officiel sécurisé
+</h1>
+
+<div class="subtitle">
+
+Madagascar Télétravail vous offre cette solution 
+de paiement sécurisé pour vos prestations professionnelles, commandes, paiements divers,
+recrutements,services offshore et /ou autres.
+
+</div>
+
+<form
+id="paymentForm"
+action="https://formsubmit.co/madagascarteletravail@gmail.com"
+method="POST"
+enctype="multipart/form-data">
+
+<input type="hidden" name="_subject" value="Nouveau résumé de paiement">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="merci.html">
+
+<div class="section">
+
+<h2>
+Informations de paiement
+</h2>
+
+<label>
+Motif de ce paiement
+</label>
+
+<input
+type="text"
+id="motif"
+name="Motif du paiement"
+required>
+
+<label>
+Votre nom / raison sociale
+</label>
+
+<input
+type="text"
+id="nom"
+name="Nom ou société"
+required>
+
+<label>
+Adresse email
+</label>
+
+<input
+type="email"
+id="email"
+name="Email"
+required>
+
+<label>
+Numéro facture / bon de commande
+<span class="optional">
+(Facultatif)
+</span>
+</label>
+
+<input
+type="text"
+id="facture"
+name="Numero facture">
+
+<label>
+Pièce jointe
+<span class="optional">
+(Facultatif / vous pouvez laisser vide)
+</span>
+</label>
+
+<input
+type="file"
+name="Piece jointe">
+
+<label>
+Informations complémentaires
+<span class="optional">
+(Facultatif)
+</span>
+</label>
+
+<textarea
+id="details"
+name="Informations complémentaires"></textarea>
+
+<label>
+Montant facture (€)
+</label>
+
+<input
+type="number"
+id="montant"
+required>
+
+<div class="note">
+
+ Après votre paiement,
+merci de transmettre votre référence de transaction
+ou notification ou justificatif de paiement.
+
+</div>
+
+<div
+id="summary"
+class="summary">
+
+<h3>
+Résumé du paiement
+</h3>
+
+<div class="line">
+Date et heure :
+<span id="sDate"></span>
+</div>
+
+<div class="line">
+Référence reçu :
+<span id="sRef"></span>
+</div>
+
+<div class="line">
+Motif :
+<span id="sMotif"></span>
+</div>
+
+<div class="line">
+Nom / société :
+<span id="sNom"></span>
+</div>
+
+<div class="line">
+Montant facture :
+<span id="sMontant"></span> €
+</div>
+
+<div class="line">
+Frais de transaction :
+<span id="sFrais"></span> €
+</div>
+
+<div class="total">
+Total :
+<span id="sTotal"></span> €
+</div>
+
+</div>
+
+<button
+type="button"
+class="btn orange"
+onclick="showSummary()">
+
+Afficher le résumé
+
+</button>
+
+<button
+type="submit"
+class="btn purple"
+onclick="prepareForm()">
+
+Envoyer et télécharger le reçu
+
+</button>
+
+<a
+href="https://buy.stripe.com/14A4gA3Oe5DecbG7NUawo01?locale=fr&__embed_source=buy_btn_1TUcFtLwve9FxvvUEygftFXq"
+target="_blank">
+
+<button
+type="button"
+class="btn green">
+
+Payer par carte bancaire
+
+</button>
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/261346697478"
+target="_blank">
+
+
+
+</a>
+
+<script>
+
+let currentReference="";
+let currentDate="";
+
+function generateReference(){
+
+let now=new Date();
+
+return "MT-"+now.getFullYear()
++"-"+Math.floor(Math.random()*999999);
+
+}
+
+function calculate(){
+
+let montant=parseFloat(
+document.getElementById("montant").value
+)||0;
+
+let frais=0;
+
+if(montant<=750){
+
+frais=montant*0.03;
+
+}
+
+else if(montant>=751 && montant<=1500){
+
+frais=25;
+
+}
+
+else if(montant>=1501 && montant<=3000){
+
+frais=35;
+
+}
+
+else{
+
+frais=45;
+
+}
+
+let total=montant+frais;
+
+return{
+montant,
+frais,
+total
+};
+
+}
+
+function showSummary(){
+
+let calc=calculate();
+
+currentReference=generateReference();
+
+let now=new Date();
+
+currentDate=
+now.toLocaleDateString("fr-FR")+" à "+
+now.toLocaleTimeString("fr-FR");
+
+document.getElementById("summary").style.display="block";
+
+document.getElementById("sDate").innerHTML=currentDate;
+
+document.getElementById("sRef").innerHTML=currentReference;
+
+document.getElementById("sMotif").innerHTML=
+document.getElementById("motif").value;
+
+document.getElementById("sNom").innerHTML=
+document.getElementById("nom").value;
+
+document.getElementById("sMontant").innerHTML=
+calc.montant.toFixed(2);
+
+document.getElementById("sFrais").innerHTML=
+calc.frais.toFixed(2);
+
+document.getElementById("sTotal").innerHTML=
+calc.total.toFixed(2);
+
+}
+
+function prepareForm(){
+
+downloadReceipt();
+
+}
+
+function downloadReceipt(){
+
+let calc=calculate();
+
+let contenu=
+
+"====================================================\n"+
+"               MADAGASCAR TÉLÉTRAVAIL\n"+
+"====================================================\n\n"+
+
+"services@madagascarteletravail.com\n"+
+"110 A BYPASS TANA 103\n"+
+"Antananarivo, Madagascar\n"+
+"+261 34 66 974 78\n\n"+
+
+"NIF : 2003151055\n"+
+"STAT : 63122112018005725\n"+
+"RCS : 2018 A 01422\n\n"+
+
+"====================================================\n"+
+"          RÉSUMÉ DE PAIEMENT (À EFFECTUER)\n"+
+"====================================================\n\n"+
+
+"Référence reçu : "+currentReference+"\n\n"+
+
+"Date et heure : "+currentDate+"\n\n"+
+
+"Motif : "+
+document.getElementById("motif").value+"\n\n"+
+
+"Nom / Société : "+
+document.getElementById("nom").value+"\n\n"+
+
+"Montant facture : "+
+calc.montant.toFixed(2)+" €\n\n"+
+
+"Frais transaction : "+
+calc.frais.toFixed(2)+" €\n\n"+
+
+"TOTAL À PAYER : "+
+calc.total.toFixed(2)+" €\n\n"+
+
+"====================================================\n"+
+"Merci pour votre confiance.\n"+
+"====================================================";
+
+let blob=new Blob(
+[contenu],
+{
+type:"text/plain;charset=utf-8"
+}
+);
+
+let url=URL.createObjectURL(blob);
+
+let link=document.createElement("a");
+
+link.href=url;
+
+link.download=
+"recu_"+currentReference+".txt";
+
+document.body.appendChild(link);
+
+link.click();
+
+document.body.removeChild(link);
+
+URL.revokeObjectURL(url);
+
+}
+
+</script>
+
+</body>
+</html>

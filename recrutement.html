@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Commande Recrutement - Madagascar Télétravail</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(135deg,#020b18,#071d3d,#0b2f5d,#020b18);
+
+background-size:400% 400%;
+
+animation:bgmove 15s ease infinite;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+@keyframes bgmove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+
+width:92%;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:25px 0 80px;
+
+}
+
+.logo{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.logo img{
+
+width:300px;
+
+max-width:90%;
+
+filter:
+drop-shadow(0 0 20px rgba(0,191,255,0.5));
+
+}
+
+.box{
+
+background:
+rgba(6,18,38,0.88);
+
+backdrop-filter:blur(16px);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+border-radius:35px;
+
+padding:40px;
+
+box-shadow:
+0 0 35px rgba(0,191,255,0.10),
+0 0 90px rgba(0,0,0,0.35);
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:14px;
+
+color:#7de8ff;
+
+text-shadow:
+0 0 12px rgba(0,191,255,0.7);
+
+}
+
+.subtitle{
+
+text-align:center;
+
+line-height:1.9;
+
+color:#dcecff;
+
+margin-bottom:35px;
+
+font-size:16px;
+
+}
+
+.section{
+
+background:
+rgba(4,14,30,0.92);
+
+border-radius:28px;
+
+padding:25px;
+
+margin-top:25px;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 0 25px rgba(0,191,255,0.08);
+
+}
+
+.section h2{
+
+margin-bottom:20px;
+
+font-size:25px;
+
+color:#73e4ff;
+
+}
+
+.conditions{
+
+line-height:2;
+
+font-size:15px;
+
+color:#dcecff;
+
+}
+
+.highlight{
+
+color:#00f0ff;
+
+font-weight:bold;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:18px;
+
+}
+
+label{
+
+display:block;
+
+margin-top:18px;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+color:#f2f7ff;
+
+}
+
+input,
+textarea,
+select{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+outline:none;
+
+border-radius:18px;
+
+background:
+rgba(11,31,63,0.95);
+
+color:white;
+
+font-size:15px;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+transition:0.3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+border:
+1px solid #00d9ff;
+
+box-shadow:
+0 0 18px rgba(0,217,255,0.22);
+
+}
+
+textarea{
+
+min-height:110px;
+
+resize:vertical;
+
+}
+
+.summary{
+
+display:none;
+
+margin-top:35px;
+
+padding:25px;
+
+border-radius:28px;
+
+background:
+rgba(2,12,26,0.95);
+
+border:
+1px solid rgba(0,255,255,0.15);
+
+}
+
+.summary h3{
+
+text-align:center;
+
+font-size:28px;
+
+margin-bottom:22px;
+
+color:#7cecff;
+
+}
+
+.line{
+
+padding:12px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+
+line-height:1.8;
+
+font-size:15px;
+
+}
+
+.total{
+
+margin-top:25px;
+
+font-size:30px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#00f0ff;
+
+}
+
+.legal{
+
+margin-top:25px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,0.03);
+
+line-height:1.9;
+
+font-size:14px;
+
+color:#dcecff;
+
+}
+
+.btn{
+
+width:100%;
+
+padding:18px;
+
+margin-top:18px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:0.3s;
+
+color:white;
+
+text-decoration:none;
+
+display:block;
+
+text-align:center;
+
+}
+
+.orange{
+
+background:
+linear-gradient(135deg,#ff9800,#ffb300);
+
+}
+
+.blue{
+
+background:
+linear-gradient(135deg,#0f62fe,#3b82ff);
+
+}
+
+.green{
+
+background:
+linear-gradient(135deg,#00c853,#00ff84);
+
+}
+
+.red{
+
+background:
+linear-gradient(135deg,#ff1744,#ff5252);
+
+}
+
+.purple{
+
+background:
+linear-gradient(135deg,#7b1fa2,#9c27b0);
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:18px;
+right:18px;
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:32px;
+
+text-decoration:none;
+
+color:white;
+
+box-shadow:
+0 0 25px rgba(0,0,0,0.35);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+width:95%;
+
+}
+
+.box{
+
+padding:18px;
+
+border-radius:24px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+}
+
+.section{
+
+padding:18px;
+
+}
+
+.section h2{
+
+font-size:22px;
+
+}
+
+.logo img{
+
+width:220px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.btn{
+
+font-size:16px;
+
+padding:16px;
+
+}
+
+.summary h3{
+
+font-size:23px;
+
+}
+
+.total{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+<img src="logomt.png">
+
+</div>
+
+<div class="box">
+
+<h1>
+Commande Service Recrutement
+</h1>
+
+<div class="subtitle">
+
+Madagascar Télétravail accompagne les entreprises,
+structures offshore et activités internationales
+dans le recrutement de profils qualifiés.
+
+</div>
+
+<form
+id="commandeForm"
+method="POST"
+action="https://formsubmit.co/madagascarteletravail@gmail.com">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="merci.html">
+
+<div class="section">
+
+<h2>
+Services & Conditions
+</h2>
+
+<div class="conditions">
+
+<span class="highlight">
+ Recrutement local et international
+</span>
+
+<br>
+
+<span class="highlight">
+ Préqualification et tests candidats
+</span>
+
+<br>
+
+<span class="highlight">
+ Télétravail ou recrutement en entreprise
+</span>
+
+<br>
+
+<span class="highlight">
+ Garantie remplacement 2 mois
+</span>
+
+<br><br>
+
+<span class="highlight">
+ Candidature Malagasy :
+</span>
+
+1 mois de salaire
+
+<br><br>
+
+<span class="highlight">
+ Candidature France / étranger :
+</span>
+
+40% du salaire
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>
+Informations commande
+</h2>
+
+<div class="grid">
+
+<div>
+<label>Nom / Société</label>
+<input type="text" id="nom" required>
+</div>
+
+<div>
+<label>Email</label>
+<input type="email" id="email" required>
+</div>
+
+</div>
+
+<div class="grid">
+
+<div>
+<label>Nombre candidats</label>
+<input type="number" id="nombre" required>
+</div>
+
+<div>
+<label>Type candidature</label>
+
+<select id="candidature">
+
+<option>
+Candidature Malagasy
+</option>
+
+<option>
+Candidature France / étranger
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<label>
+Profil recherché
+</label>
+
+<input type="text" id="profil" required>
+
+<div class="grid">
+
+<div>
+<label>Pays recherché</label>
+<input type="text" id="pays">
+</div>
+
+<div>
+<label>Ville recherchée</label>
+<input type="text" id="ville">
+</div>
+
+</div>
+
+<div class="grid">
+
+<div>
+<label>Âge minimum</label>
+<input type="number" id="ageMin">
+</div>
+
+<div>
+<label>Âge maximum</label>
+<input type="number" id="ageMax">
+</div>
+
+</div>
+
+<div class="grid">
+
+<div>
+
+<label>
+Sexe recherché
+</label>
+
+<select id="sexe">
+
+<option>
+Indifférent
+</option>
+
+<option>
+Homme
+</option>
+
+<option>
+Femme
+</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>
+Expérience minimum
+</label>
+
+<input type="text" id="experience">
+
+</div>
+
+</div>
+
+<label>
+Diplôme / Spécificités
+</label>
+
+<textarea id="diplome"></textarea>
+
+<label>
+Télétravail ou en entreprise
+</label>
+
+<select id="mode">
+
+<option>
+Télétravail
+</option>
+
+<option>
+En entreprise
+</option>
+
+</select>
+
+<label>
+Adresse exacte si entreprise
+</label>
+
+<textarea id="adresse"></textarea>
+
+<label>
+Montant total dû (€)
+</label>
+
+<input type="number" id="montantTotal" required>
+
+<label>
+Montant payé ce jour (€)
+</label>
+
+<input type="number" id="montantJour" required>
+
+<label>
+Commentaires complémentaires
+</label>
+
+<textarea id="details"></textarea>
+
+<div id="summary" class="summary"></div>
+
+<button
+type="button"
+class="btn orange"
+onclick="showSummary()">
+
+Afficher le résumé
+
+</button>
+
+<button
+type="button"
+class="btn blue"
+onclick="downloadReceipt()">
+
+Télécharger ma commande
+
+</button>
+
+<button
+type="submit"
+class="btn red">
+
+Envoyer ma commande
+
+</button>
+
+<button
+type="button"
+class="btn green"
+onclick="openStripe()">
+
+Payer ma commande
+
+</button>
+
+
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/261346697478"
+target="_blank">
+
+
+
+</a>
+
+<script>
+
+let referenceCommande="";
+
+function generateReference(){
+
+let now=new Date();
+
+return "MT-REC-"+now.getFullYear()
++"-"+Math.floor(Math.random()*999999);
+
+}
+
+function showSummary(){
+
+let total=
+parseFloat(
+document.getElementById("montantTotal").value
+);
+
+if(!total){
+
+alert("Veuillez renseigner le montant total.");
+
+return false;
+
+}
+
+let paye=
+parseFloat(
+document.getElementById("montantJour").value
+)||0;
+
+let reste=total-paye;
+
+if(reste<0){
+
+reste=0;
+
+}
+
+referenceCommande=
+generateReference();
+
+let now=new Date();
+
+let date=
+now.toLocaleDateString("fr-FR");
+
+let heure=
+now.toLocaleTimeString("fr-FR");
+
+document.getElementById("summary").style.display="block";
+
+document.getElementById("summary").innerHTML=
+
+`
+<h3>FACTURE PROFORMA</h3>
+
+<div class="legal">
+
+<b style="font-size:22px;color:#7de8ff;">
+MADAGASCAR TÉLÉTRAVAIL
+</b>
+
+<br><br>
+
+110 A BYPASS TANA 103
+<br>
+Antananarivo - Madagascar
+
+<br><br>
+
+services@madagascarteletravail.com
+
+<br>
+
+www.madagascarteletravail.com
+
+<br>
+
++261 34 66 974 78
+
+<br><br>
+
+NIF : 2003151055
+<br>
+STAT : 63122112018005725
+<br>
+RCS : 2018 A 01422
+
+</div>
+
+<div class="line"><b>Référence :</b> ${referenceCommande}</div>
+
+<div class="line"><b>Date :</b> ${date}</div>
+
+<div class="line"><b>Heure :</b> ${heure}</div>
+
+<div class="line"><b>Destinataire :</b> ${document.getElementById("nom").value}</div>
+
+<div class="line"><b>Email :</b> ${document.getElementById("email").value}</div>
+
+<div class="line"><b>Nombre candidats :</b> ${document.getElementById("nombre").value}</div>
+
+<div class="line"><b>Profil :</b> ${document.getElementById("profil").value}</div>
+
+<div class="line"><b>Type candidature :</b> ${document.getElementById("candidature").value}</div>
+
+<div class="line"><b>Pays / Ville :</b> ${document.getElementById("pays").value} / ${document.getElementById("ville").value}</div>
+
+<div class="line"><b>Âge :</b> ${document.getElementById("ageMin").value} à ${document.getElementById("ageMax").value} ans</div>
+
+<div class="line"><b>Sexe :</b> ${document.getElementById("sexe").value}</div>
+
+<div class="line"><b>Expérience :</b> ${document.getElementById("experience").value}</div>
+
+<div class="line"><b>Diplôme :</b> ${document.getElementById("diplome").value}</div>
+
+<div class="line"><b>Mode :</b> ${document.getElementById("mode").value}</div>
+
+<div class="line"><b>Montant total :</b> ${total.toFixed(2)} €</div>
+
+<div class="line"><b>Montant avancé :</b> ${paye.toFixed(2)} €</div>
+
+<div class="line"><b>Reste à payer :</b> ${reste.toFixed(2)} €</div>
+
+<div class="line"><b>Commentaires :</b> ${document.getElementById("details").value}</div>
+
+<div class="line">
+<b>Mode de paiement :</b>
+Par carte bancaire
+</div>
+
+<div class="total">
+
+Arrêtée la présente facture
+à la somme totale de
+
+<br><br>
+
+${total.toFixed(2)} Euros
+
+</div>
+
+`;
+
+return true;
+
+}
+
+function downloadReceipt(){
+
+let valid=showSummary();
+
+if(valid===false){
+
+return;
+
+}
+
+let contenu=
+document.getElementById("summary").innerText;
+
+let blob=new Blob(
+[contenu],
+{
+type:"text/plain;charset=utf-8"
+}
+);
+
+let url=URL.createObjectURL(blob);
+
+let link=document.createElement("a");
+
+link.href=url;
+
+link.download=
+"facture_proforma_"+referenceCommande+".txt";
+
+document.body.appendChild(link);
+
+link.click();
+
+document.body.removeChild(link);
+
+URL.revokeObjectURL(url);
+
+}
+
+function openStripe(){
+
+let valid=showSummary();
+
+if(valid===false){
+
+return;
+
+}
+
+window.open(
+"https://buy.stripe.com/14A4gA3Oe5DecbG7NUawo01?locale=fr&__embed_source=buy_btn_1TUcFtLwve9FxvvUEygftFXq",
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>

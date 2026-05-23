@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formation Télétravail - Madagascar Télétravail</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(135deg,#010814,#071d3d,#0d2f63,#010814);
+
+background-size:400% 400%;
+
+animation:bgmove 14s ease infinite;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+@keyframes bgmove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+
+width:92%;
+
+max-width:1300px;
+
+margin:auto;
+
+padding:25px 0 80px;
+
+}
+
+.logo{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.logo img{
+
+width:320px;
+
+max-width:92%;
+
+filter:
+drop-shadow(0 0 18px rgba(0,191,255,0.45));
+
+}
+
+.box{
+
+background:
+rgba(5,18,38,0.88);
+
+backdrop-filter:blur(16px);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+border-radius:35px;
+
+padding:40px;
+
+box-shadow:
+0 0 35px rgba(0,191,255,0.10),
+0 0 90px rgba(0,0,0,0.35);
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:44px;
+
+margin-bottom:12px;
+
+color:#7de8ff;
+
+text-shadow:
+0 0 12px rgba(0,191,255,0.7);
+
+}
+
+.subtitle{
+
+text-align:center;
+
+line-height:1.9;
+
+color:#dcecff;
+
+margin-bottom:40px;
+
+font-size:16px;
+
+}
+
+.section{
+
+background:
+rgba(4,14,30,0.92);
+
+border-radius:28px;
+
+padding:25px;
+
+margin-top:25px;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 0 20px rgba(0,191,255,0.06);
+
+}
+
+.section h2{
+
+margin-bottom:20px;
+
+font-size:26px;
+
+color:#73e4ff;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+
+gap:18px;
+
+}
+
+.card{
+
+background:
+rgba(11,31,63,0.92);
+
+padding:22px;
+
+border-radius:22px;
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 25px rgba(0,191,255,0.15);
+
+}
+
+.card h3{
+
+color:#00e5ff;
+
+margin-bottom:12px;
+
+font-size:22px;
+
+}
+
+.card p{
+
+line-height:1.9;
+
+color:#dcecff;
+
+font-size:15px;
+
+}
+
+.highlight{
+
+color:#00f0ff;
+
+font-weight:bold;
+
+}
+
+label{
+
+display:block;
+
+margin-top:18px;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+color:#f2f7ff;
+
+}
+
+input,
+textarea,
+select{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+outline:none;
+
+border-radius:18px;
+
+background:
+rgba(11,31,63,0.95);
+
+color:white;
+
+font-size:15px;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+}
+
+textarea{
+
+min-height:120px;
+
+resize:vertical;
+
+}
+
+.summary{
+
+margin-top:35px;
+
+padding:25px;
+
+border-radius:28px;
+
+background:
+rgba(2,12,26,0.95);
+
+border:
+1px solid rgba(0,255,255,0.15);
+
+}
+
+.line{
+
+padding:13px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+
+line-height:1.8;
+
+font-size:15px;
+
+}
+
+.total{
+
+margin-top:22px;
+
+font-size:34px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#00f0ff;
+
+text-shadow:
+0 0 15px rgba(0,240,255,0.45);
+
+}
+
+.btn{
+
+width:100%;
+
+padding:18px;
+
+margin-top:18px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+color:white;
+
+text-decoration:none;
+
+display:block;
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.red{
+
+background:
+linear-gradient(135deg,#ff1744,#ff5252);
+
+}
+
+.green{
+
+background:
+linear-gradient(135deg,#00c853,#00ff84);
+
+}
+
+.blue{
+
+background:
+linear-gradient(135deg,#0f62fe,#3b82ff);
+
+}
+
+.purple{
+
+background:
+linear-gradient(135deg,#7b1fa2,#9c27b0);
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:18px;
+right:18px;
+
+width:68px;
+height:68px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:34px;
+
+text-decoration:none;
+
+color:white;
+
+box-shadow:
+0 0 25px rgba(0,0,0,0.35);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.box{
+
+padding:18px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.logo img{
+
+width:220px;
+
+}
+
+.summary{
+
+padding:18px;
+
+}
+
+.total{
+
+font-size:26px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+<img src="logomt.png">
+
+</div>
+
+<div class="box">
+
+<h1>
+Formation Télétravail
+</h1>
+
+<div class="subtitle">
+
+Développez vos compétences professionnelles,
+devenez autonome
+et apprenez à proposer vos services
+à domicile ou en entreprise.
+
+</div>
+
+<div class="section">
+
+<h2>
+Nos formations professionnelles
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Formation personnalisée
+</h3>
+
+<p>
+
+<span class="highlight">
+Montant libre
+</span>
+
+<br><br>
+
+Formation adaptée à vos besoins,
+votre activité,
+votre entreprise
+ou votre projet professionnel.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Dirigeant de centre offshore
+</h3>
+
+<p>
+
+<span class="highlight">
+600 Euros
+</span>
+
+<br><br>
+
+10h de formation
+<br>
+Créneau au choix
+
+<br><br>
+
+Création,
+gestion,
+recrutement,
+pilotage production,
+organisation offshore,
+acquisition clients
+et développement BPO.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Téléprospecteur
+</h3>
+
+<p>
+
+<span class="highlight">
+200 Euros
+</span>
+
+<br><br>
+
+1 semaine
+<br>
+2h / jour
+
+<br><br>
+
+Prospection téléphonique,
+qualification de prospects,
+prise de rendez-vous
+et argumentaire commercial.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Télécommercial
+</h3>
+
+<p>
+
+<span class="highlight">
+250 Euros
+</span>
+<br><br>
+1 semaine
+<br>
+
+2h30 / jour
+
+<br><br>
+
+Techniques de vente,
+closing,
+traitement objections
+et conversion commerciale.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Marketing
+</h3>
+
+<p>
+
+<span class="highlight">
+100 Euros
+</span>
+
+<br><br>
+
+3 jours
+<br>
+2h / jour
+
+<br><br>
+
+Apprendre à vendre ses produits,
+services,
+développer sa visibilité
+et attirer des clients.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Créateur de contenu
+</h3>
+
+<p>
+
+<span class="highlight">
+300 Euros
+</span>
+
+<br><br>
+
+2 semaines
+<br>
+2h / jour
+
+<br><br>
+
+Création de contenus réseaux sociaux,
+visuels,
+vidéos,
+publicités
+et communication digitale.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>
+Commande formation
+</h2>
+
+<form
+method="POST"
+action="https://formsubmit.co/madagascarteletravail@gmail.com">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="merci.html">
+
+<div class="grid">
+
+<div>
+
+<label>
+Nom / Société
+</label>
+
+<input type="text" name="Nom" required>
+
+</div>
+
+<div>
+
+<label>
+Adresse email
+</label>
+
+<input type="email" name="Email" required>
+
+</div>
+
+</div>
+
+<label>
+Vous êtes
+</label>
+
+<select name="Type client">
+
+<option>
+Particulier
+</option>
+
+<option>
+Entreprise
+</option>
+
+</select>
+
+<label>
+Formation souhaitée
+</label>
+
+<select
+id="formation"
+onchange="calculerPanier()">
+
+<option value="0" selected>
+Formation personnalisée
+</option>
+
+<option value="600">
+Dirigeant de centre offshore - 600€
+</option>
+
+<option value="200">
+Téléprospecteur - 200€
+</option>
+
+<option value="250">
+Télécommercial - 250€
+</option>
+
+<option value="100">
+Marketing - 100€
+</option>
+
+<option value="300">
+Créateur de contenu - 300€
+</option>
+
+</select>
+
+<label>
+Montant personnalisé (€)
+</label>
+
+<input
+type="number"
+id="montantLibre"
+placeholder="Entrez votre montant"
+oninput="calculerPanier()">
+
+<label>
+Nombre de participants
+</label>
+
+<input
+type="number"
+id="participants"
+value="1"
+min="1"
+oninput="calculerPanier()">
+
+<div style="margin-top:15px;line-height:1.9;color:#dcecff;">
+
+<span class="highlight">
+Dégressif :
+</span>
+
+-100 Euros
+pour plus de 3 participants
+dans le même créneau horaire.
+
+</div>
+
+<label>
+Créneau souhaité
+</label>
+
+<select
+id="creneau"
+onchange="calculerPanier()">
+
+<option value="0">
+Lundi au vendredi entre 8h et 17h
+</option>
+
+<option value="30">
+Cours du soir entre 18h et 19h30 (+30€)
+</option>
+
+</select>
+
+<label>
+Choisir votre thématique
+</label>
+
+<textarea
+name="Thématique"></textarea>
+
+<label>
+Commentaires complémentaires
+</label>
+
+<textarea
+name="Commentaires"></textarea>
+
+<div class="summary">
+
+<div class="line">
+<b>Formation :</b>
+<span id="formationTxt"></span>
+</div>
+
+<div class="line">
+<b>Participants :</b>
+<span id="participantsTxt"></span>
+</div>
+
+<div class="line">
+<b>Créneau :</b>
+<span id="creneauTxt"></span>
+</div>
+
+<div class="line">
+<b>Prix formation :</b>
+<span id="prixFormation"></span> €
+</div>
+
+<div class="line">
+<b>Supplément créneau :</b>
+<span id="supplement"></span> €
+</div>
+
+<div class="line">
+<b>Remise groupe :</b>
+-<span id="remise"></span> €
+</div>
+
+<div class="total">
+Total panier :
+<span id="totalPanier"></span> €
+</div>
+
+</div>
+
+<button
+type="submit"
+class="btn red">
+
+Envoyer ma commande
+
+</button>
+
+<button
+type="button"
+class="btn green"
+onclick="openStripe()">
+
+Payer ma commande
+
+</button>
+
+<a
+href="https://www.madagascarteletravail.com"
+class="btn purple">
+
+Commander nos services
+
+</a>
+
+<a
+href="index.html"
+class="btn blue">
+
+Retour index
+
+</a>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/261346697478"
+target="_blank">
+
+
+
+</a>
+
+<script>
+
+function calculerPanier(){
+
+let formation=
+document.getElementById("formation");
+
+let prix=
+parseFloat(formation.value);
+
+let libre=
+parseFloat(
+document.getElementById("montantLibre").value
+)||0;
+
+if(prix===0){
+
+prix=libre;
+
+}
+
+let participants=
+parseInt(
+document.getElementById("participants").value
+)||1;
+
+let supplement=
+parseFloat(
+document.getElementById("creneau").value
+)||0;
+
+let montant=
+(prix*participants)+supplement;
+
+let remise=0;
+
+if(participants>=4){
+
+remise=100;
+
+}
+
+let total=montant-remise;
+
+if(total<0){
+
+total=0;
+
+}
+
+document.getElementById("formationTxt").innerHTML=
+formation.options[formation.selectedIndex].text;
+
+document.getElementById("participantsTxt").innerHTML=
+participants;
+
+document.getElementById("creneauTxt").innerHTML=
+document.getElementById("creneau")
+.options[
+document.getElementById("creneau").selectedIndex
+].text;
+
+document.getElementById("prixFormation").innerHTML=
+prix.toFixed(2);
+
+document.getElementById("supplement").innerHTML=
+supplement.toFixed(2);
+
+document.getElementById("remise").innerHTML=
+remise.toFixed(2);
+
+document.getElementById("totalPanier").innerHTML=
+total.toFixed(2);
+
+}
+
+calculerPanier();
+
+function openStripe(){
+
+window.open(
+"https://buy.stripe.com/14A4gA3Oe5DecbG7NUawo01?locale=fr&__embed_source=buy_btn_1TUcFtLwve9FxvvUEygftFXq",
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
